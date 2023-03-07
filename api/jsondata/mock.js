@@ -1,0 +1,869 @@
+
+const landowners =
+[{
+  id: 1,
+  username: 'bchesher0',
+  email: 'cbalme0@hugedomains.com',
+  password: 'ZmOoUVl',
+  contact: '862-854-6705'
+}, {
+  id: 2,
+  username: 'kjewis1',
+  email: 'landreazzi1@blogs.com',
+  password: 'SnwKqUCwrc',
+  contact: '477-555-4447'
+}, {
+  id: 3,
+  username: 'rkarpeev2',
+  email: 'dellgood2@xrea.com',
+  password: 'aJy4vo6L5X',
+  contact: '142-218-7247'
+}, {
+  id: 4,
+  username: 'cspikins3',
+  email: 'mbalsom3@addtoany.com',
+  password: '4jUJIQWuTt2',
+  contact: '583-482-7786'
+}, {
+  id: 5,
+  username: 'btee4',
+  email: 'tram4@walmart.com',
+  password: 'kzTVNI1',
+  contact: '792-680-1534'
+}, {
+  id: 6,
+  username: 'bnerger5',
+  email: 'aplank5@arizona.edu',
+  password: '1bWpSeTp9',
+  contact: '541-969-7746'
+}, {
+  id: 7,
+  username: 'rwoloschinski6',
+  email: 'tchatburn6@nationalgeographic.com',
+  password: 'BEYwfJwR',
+  contact: '335-927-8359'
+}, {
+  id: 8,
+  username: 'anorbury7',
+  email: 'kroyle7@hp.com',
+  password: 'GD5anVDpBI',
+  contact: '356-206-9505'
+}, {
+  id: 9,
+  username: 'svalsler8',
+  email: 'jlanghorne8@moonfruit.com',
+  password: 'vgleId15',
+  contact: '448-501-9014'
+}, {
+  id: 10,
+  username: 'ejohnsson9',
+  email: 'tpendrick9@pcworld.com',
+  password: 'szfaStut',
+  contact: '803-980-3313'
+}, {
+  id: 11,
+  username: 'ddillimorea',
+  email: 'aagerskowa@nifty.com',
+  password: '0oSwYell9v',
+  contact: '227-312-7124'
+}, {
+  id: 12,
+  username: 'bremmersb',
+  email: 'laxtellb@latimes.com',
+  password: 'DVcoWeuknhfn',
+  contact: '696-542-7113'
+}, {
+  id: 13,
+  username: 'ccrushc',
+  email: 'csandaverc@cpanel.net',
+  password: 'a0xDGA4ThK4',
+  contact: '166-458-7950'
+}, {
+  id: 14,
+  username: 'propkesd',
+  email: 'egravestoned@dailymotion.com',
+  password: '5WgoEZQkKC',
+  contact: '998-860-0617'
+}, {
+  id: 15,
+  username: 'lkopelmane',
+  email: 'klewknore@psu.edu',
+  password: '31ikqy',
+  contact: '513-957-8176'
+}, {
+  id: 16,
+  username: 'cchallenorf',
+  email: 'cbowlasf@bbb.org',
+  password: 'FLhzHm7iI',
+  contact: '390-301-8789'
+}, {
+  id: 17,
+  username: 'jcurleyg',
+  email: 'dgorewayg@cisco.com',
+  password: 'uJdHemKeWV7',
+  contact: '609-136-5326'
+}, {
+  id: 18,
+  username: 'oovetth',
+  email: 'mjerzycowskih@people.com.cn',
+  password: 'NVLiA7V58z',
+  contact: '136-291-8462'
+}, {
+  id: 19,
+  username: 'dricardoi',
+  email: 'ebeamsoni@examiner.com',
+  password: 'BAaJ0eD10b9h',
+  contact: '121-402-0674'
+}, {
+  id: 20,
+  username: 'gwarnej',
+  email: 'jmcbrierj@craigslist.org',
+  password: 'zJ00pLqMpJM2',
+  contact: '373-675-2772'
+}]
+
+const rvowners = [{
+  id: 1,
+  username: 'khuman0',
+  email: 'fcluley0@aol.com',
+  password: '2RZgXeYooEE',
+  contact: '186-589-3018',
+  is_landowner: false
+}, {
+  id: 2,
+  username: 'gblade1',
+  email: 'jtrickett1@i2i.jp',
+  password: '9B5tXe',
+  contact: '698-379-0545',
+  is_landowner: true
+}, {
+  id: 3,
+  username: 'aclara2',
+  email: 'fmckeating2@sogou.com',
+  password: 'CC5dKOsLH',
+  contact: '933-268-6112',
+  is_landowner: true
+}, {
+  id: 4,
+  username: 'mkalinke3',
+  email: 'gcodeman3@51.la',
+  password: 'HgnkWeR4fac',
+  contact: '754-341-9470',
+  is_landowner: true
+}, {
+  id: 5,
+  username: 'psyrie4',
+  email: 'oerley4@mozilla.org',
+  password: 'Non63Jy2',
+  contact: '713-442-3850',
+  is_landowner: false
+}, {
+  id: 6,
+  username: 'ssappy5',
+  email: 'sharget5@mediafire.com',
+  password: 'HDsGeYw',
+  contact: '185-883-0649',
+  is_landowner: true
+}, {
+  id: 7,
+  username: 'cbeatson6',
+  email: 'lvauter6@weibo.com',
+  password: 'Raf1Ob',
+  contact: '851-772-1999',
+  is_landowner: false
+}, {
+  id: 8,
+  username: 'schance7',
+  email: 'cmaccrea7@merriam-webster.com',
+  password: 'JKME5Hq8GGk',
+  contact: '879-313-1612',
+  is_landowner: true
+}, {
+  id: 9,
+  username: 'tmcalpine8',
+  email: 'abrayshaw8@nhs.uk',
+  password: '2XMtQ6dU',
+  contact: '764-908-8004',
+  is_landowner: true
+}, {
+  id: 10,
+  username: 'bmetham9',
+  email: 'hfedorski9@examiner.com',
+  password: 'IsJHnYNnZx3',
+  contact: '873-515-8201',
+  is_landowner: false
+}, {
+  id: 11,
+  username: 'msedgewortha',
+  email: 'dhallatta@cargocollective.com',
+  password: 'EyqtdTkyhlnK',
+  contact: '702-191-6149',
+  is_landowner: false
+}, {
+  id: 12,
+  username: 'sstoopb',
+  email: 'brosenbuschb@utexas.edu',
+  password: 'cl6bxJrN',
+  contact: '852-482-4669',
+  is_landowner: false
+}, {
+  id: 13,
+  username: 'bcuthillc',
+  email: 'wsootc@indiatimes.com',
+  password: 'xYdiw1',
+  contact: '682-562-9567',
+  is_landowner: false
+}, {
+  id: 14,
+  username: 'hcollmand',
+  email: 'eburrassd@yandex.ru',
+  password: '63AYmb5tB2',
+  contact: '614-286-3567',
+  is_landowner: true
+}, {
+  id: 15,
+  username: 'tbeardwelle',
+  email: 'ethackwraye@cbsnews.com',
+  password: 'Sr84fQ',
+  contact: '496-320-1468',
+  is_landowner: true
+}, {
+  id: 16,
+  username: 'caxelbyf',
+  email: 'hforberf@liveinternet.ru',
+  password: 'y0ouLfZ',
+  contact: '478-675-6709',
+  is_landowner: true
+}, {
+  id: 17,
+  username: 'ycatherallg',
+  email: 'cvoakg@irs.gov',
+  password: 'nfKKjezwzam4',
+  contact: '433-705-0495',
+  is_landowner: false
+}, {
+  id: 18,
+  username: 'swalklateh',
+  email: 'rnurseyh@nydailynews.com',
+  password: 's0a0DzleX29b',
+  contact: '241-720-6506',
+  is_landowner: true
+}, {
+  id: 19,
+  username: 'bhartricki',
+  email: 'arobertssoni@youtube.com',
+  password: '9CiW5RgXoFR2',
+  contact: '891-102-6700',
+  is_landowner: true
+}, {
+  id: 20,
+  username: 'tstebbingsj',
+  email: 'fsculpherj@topsy.com',
+  password: 'zOT2Q2V0L',
+  contact: '959-774-2623',
+  is_landowner: false
+}]
+
+const listings = [{
+  id: 1,
+  landownerid: 9,
+  description: 'harness viral communities',
+  price: '$793.84',
+  photo: 'http://dummyimage.com/149x149.png/ff4444/ffffff',
+  amenities: 'restrooms'
+}, {
+  id: 2,
+  landownerid: 8,
+  description: 'matrix end-to-end bandwidth',
+  price: '$686.76',
+  photo: 'http://dummyimage.com/248x212.png/ff4444/ffffff',
+  amenities: 'showers'
+}, {
+  id: 3,
+  landownerid: 6,
+  description: 'synthesize B2B applications',
+  price: '$933.11',
+  photo: 'http://dummyimage.com/140x191.jpg/ff4444/ffffff',
+  amenities: 'water'
+}, {
+  id: 4,
+  landownerid: 13,
+  description: 'utilize holistic solutions',
+  price: '$81.88',
+  photo: 'http://dummyimage.com/249x177.bmp/5fa2dd/ffffff',
+  amenities: 'wifi'
+}, {
+  id: 5,
+  landownerid: 12,
+  description: 'orchestrate wireless mindshare',
+  price: '$764.96',
+  photo: 'http://dummyimage.com/123x113.bmp/cc0000/ffffff',
+  amenities: 'wifi'
+}, {
+  id: 6,
+  landownerid: 11,
+  description: 'orchestrate bricks-and-clicks experiences',
+  price: '$891.48',
+  photo: 'http://dummyimage.com/145x167.bmp/5fa2dd/ffffff',
+  amenities: 'water'
+}, {
+  id: 7,
+  landownerid: 6,
+  description: 'visualize cross-media ROI',
+  price: '$524.98',
+  photo: 'http://dummyimage.com/115x249.bmp/dddddd/000000',
+  amenities: 'electric'
+}, {
+  id: 8,
+  landownerid: 16,
+  description: 'engineer front-end e-services',
+  price: '$160.48',
+  photo: 'http://dummyimage.com/138x241.bmp/5fa2dd/ffffff',
+  amenities: 'water'
+}, {
+  id: 9,
+  landownerid: 10,
+  description: 'disintermediate revolutionary portals',
+  price: '$801.99',
+  photo: 'http://dummyimage.com/174x178.png/ff4444/ffffff',
+  amenities: 'wifi'
+}, {
+  id: 10,
+  landownerid: 7,
+  description: 'recontextualize web-enabled metrics',
+  price: '$355.14',
+  photo: 'http://dummyimage.com/236x214.png/dddddd/000000',
+  amenities: 'electric'
+}, {
+  id: 11,
+  landownerid: 13,
+  description: 'evolve dynamic methodologies',
+  price: '$429.90',
+  photo: 'http://dummyimage.com/194x220.jpg/5fa2dd/ffffff',
+  amenities: 'water'
+}, {
+  id: 12,
+  landownerid: 11,
+  description: 'benchmark transparent channels',
+  price: '$961.21',
+  photo: 'http://dummyimage.com/128x108.jpg/cc0000/ffffff',
+  amenities: 'restrooms'
+}, {
+  id: 13,
+  landownerid: 9,
+  description: 'deliver extensible markets',
+  price: '$426.17',
+  photo: 'http://dummyimage.com/145x157.jpg/ff4444/ffffff',
+  amenities: 'showers'
+}, {
+  id: 14,
+  landownerid: 1,
+  description: 'incubate seamless niches',
+  price: '$759.08',
+  photo: 'http://dummyimage.com/231x169.jpg/cc0000/ffffff',
+  amenities: 'water'
+}, {
+  id: 15,
+  landownerid: 7,
+  description: 'facilitate distributed experiences',
+  price: '$764.08',
+  photo: 'http://dummyimage.com/191x109.jpg/5fa2dd/ffffff',
+  amenities: 'water'
+}, {
+  id: 16,
+  landownerid: 9,
+  description: 'e-enable B2C supply-chains',
+  price: '$746.34',
+  photo: 'http://dummyimage.com/181x138.jpg/5fa2dd/ffffff',
+  amenities: 'water'
+}, {
+  id: 17,
+  landownerid: 12,
+  description: 'syndicate bleeding-edge interfaces',
+  price: '$357.39',
+  photo: 'http://dummyimage.com/250x189.jpg/ff4444/ffffff',
+  amenities: 'restrooms'
+}, {
+  id: 18,
+  landownerid: 20,
+  description: 'innovate killer architectures',
+  price: '$78.57',
+  photo: 'http://dummyimage.com/196x187.bmp/5fa2dd/ffffff',
+  amenities: 'electric'
+}, {
+  id: 19,
+  landownerid: 13,
+  description: 'optimize back-end synergies',
+  price: '$277.05',
+  photo: 'http://dummyimage.com/106x156.jpg/5fa2dd/ffffff',
+  amenities: 'water'
+}, {
+  id: 20,
+  landownerid: 19,
+  description: 'brand frictionless interfaces',
+  price: '$170.02',
+  photo: 'http://dummyimage.com/190x168.png/dddddd/000000',
+  amenities: 'showers'
+}]
+
+const reservations = [{
+  rvownerid: 14,
+  listingid: 16,
+  date: '12/6/2019',
+  id: '16,14,12/6/2019'
+}, {
+  rvownerid: 20,
+  listingid: 15,
+  date: '9/8/2022',
+  id: '15,20,9/8/2022'
+}, {
+  rvownerid: 4,
+  listingid: 19,
+  date: '11/11/2020',
+  id: '19,4,11/11/2020'
+}, {
+  rvownerid: 4,
+  listingid: 7,
+  date: '12/28/2021',
+  id: '7,4,12/28/2021'
+}, {
+  rvownerid: 4,
+  listingid: 18,
+  date: '6/25/2022',
+  id: '18,4,6/25/2022'
+}, {
+  rvownerid: 12,
+  listingid: 19,
+  date: '2/25/2022',
+  id: '19,12,2/25/2022'
+}, {
+  rvownerid: 11,
+  listingid: 10,
+  date: '6/18/2019',
+  id: '10,11,6/18/2019'
+}, {
+  rvownerid: 9,
+  listingid: 20,
+  date: '10/10/2021',
+  id: '20,9,10/10/2021'
+}, {
+  rvownerid: 10,
+  listingid: 8,
+  date: '7/18/2020',
+  id: '8,10,7/18/2020'
+}, {
+  rvownerid: 4,
+  listingid: 1,
+  date: '12/9/2020',
+  id: '1,4,12/9/2020'
+}, {
+  rvownerid: 10,
+  listingid: 13,
+  date: '9/29/2020',
+  id: '13,10,9/29/2020'
+}, {
+  rvownerid: 5,
+  listingid: 7,
+  date: '3/5/2019',
+  id: '7,5,3/5/2019'
+}, {
+  rvownerid: 20,
+  listingid: 16,
+  date: '8/1/2021',
+  id: '16,20,8/1/2021'
+}, {
+  rvownerid: 20,
+  listingid: 10,
+  date: '7/31/2021',
+  id: '10,20,7/31/2021'
+}, {
+  rvownerid: 5,
+  listingid: 9,
+  date: '9/5/2021',
+  id: '9,5,9/5/2021'
+}, {
+  rvownerid: 8,
+  listingid: 10,
+  date: '10/16/2019',
+  id: '10,8,10/16/2019'
+}, {
+  rvownerid: 15,
+  listingid: 7,
+  date: '7/20/2020',
+  id: '7,15,7/20/2020'
+}, {
+  rvownerid: 13,
+  listingid: 7,
+  date: '11/19/2020',
+  id: '7,13,11/19/2020'
+}, {
+  rvownerid: 2,
+  listingid: 4,
+  date: '5/2/2020',
+  id: '4,2,5/2/2020'
+}, {
+  rvownerid: 3,
+  listingid: 14,
+  date: '11/30/2019',
+  id: '14,3,11/30/2019'
+}, {
+  rvownerid: 16,
+  listingid: 9,
+  date: '3/14/2020',
+  id: '9,16,3/14/2020'
+}, {
+  rvownerid: 15,
+  listingid: 5,
+  date: '12/16/2019',
+  id: '5,15,12/16/2019'
+}, {
+  rvownerid: 14,
+  listingid: 6,
+  date: '9/17/2019',
+  id: '6,14,9/17/2019'
+}, {
+  rvownerid: 13,
+  listingid: 17,
+  date: '8/10/2022',
+  id: '17,13,8/10/2022'
+}, {
+  rvownerid: 11,
+  listingid: 9,
+  date: '5/5/2021',
+  id: '9,11,5/5/2021'
+}, {
+  rvownerid: 8,
+  listingid: 15,
+  date: '10/20/2022',
+  id: '15,8,10/20/2022'
+}, {
+  rvownerid: 5,
+  listingid: 16,
+  date: '10/3/2022',
+  id: '16,5,10/3/2022'
+}, {
+  rvownerid: 9,
+  listingid: 10,
+  date: '11/18/2021',
+  id: '10,9,11/18/2021'
+}, {
+  rvownerid: 5,
+  listingid: 13,
+  date: '5/28/2021',
+  id: '13,5,5/28/2021'
+}, {
+  rvownerid: 1,
+  listingid: 7,
+  date: '12/27/2019',
+  id: '7,1,12/27/2019'
+}, {
+  rvownerid: 8,
+  listingid: 1,
+  date: '11/22/2020',
+  id: '1,8,11/22/2020'
+}, {
+  rvownerid: 14,
+  listingid: 16,
+  date: '8/1/2019',
+  id: '16,14,8/1/2019'
+}, {
+  rvownerid: 8,
+  listingid: 15,
+  date: '8/7/2020',
+  id: '15,8,8/7/2020'
+}, {
+  rvownerid: 17,
+  listingid: 5,
+  date: '3/15/2022',
+  id: '5,17,3/15/2022'
+}, {
+  rvownerid: 17,
+  listingid: 20,
+  date: '6/29/2022',
+  id: '20,17,6/29/2022'
+}]
+
+const rvownerfav_listings = [{
+  rvownerid: 10,
+  listingid: 4,
+  id: '4,10'
+}, {
+  rvownerid: 19,
+  listingid: 6,
+  id: '6,19'
+}, {
+  rvownerid: 6,
+  listingid: 11,
+  id: '11,6'
+}, {
+  rvownerid: 11,
+  listingid: 10,
+  id: '10,11'
+}, {
+  rvownerid: 10,
+  listingid: 19,
+  id: '19,10'
+}, {
+  rvownerid: 20,
+  listingid: 20,
+  id: '20,20'
+}, {
+  rvownerid: 14,
+  listingid: 7,
+  id: '7,14'
+}, {
+  rvownerid: 3,
+  listingid: 20,
+  id: '20,3'
+}, {
+  rvownerid: 10,
+  listingid: 2,
+  id: '2,10'
+}, {
+  rvownerid: 9,
+  listingid: 14,
+  id: '14,9'
+}, {
+  rvownerid: 12,
+  listingid: 16,
+  id: '16,12'
+}, {
+  rvownerid: 20,
+  listingid: 15,
+  id: '15,20'
+}, {
+  rvownerid: 9,
+  listingid: 6,
+  id: '6,9'
+}, {
+  rvownerid: 9,
+  listingid: 8,
+  id: '8,9'
+}, {
+  rvownerid: 13,
+  listingid: 19,
+  id: '19,13'
+}, {
+  rvownerid: 7,
+  listingid: 7,
+  id: '7,7'
+}, {
+  rvownerid: 11,
+  listingid: 2,
+  id: '2,11'
+}, {
+  rvownerid: 2,
+  listingid: 6,
+  id: '6,2'
+}, {
+  rvownerid: 2,
+  listingid: 11,
+  id: '11,2'
+}, {
+  rvownerid: 6,
+  listingid: 17,
+  id: '17,6'
+}, {
+  rvownerid: 13,
+  listingid: 19,
+  id: '19,13'
+}, {
+  rvownerid: 11,
+  listingid: 4,
+  id: '4,11'
+}, {
+  rvownerid: 18,
+  listingid: 3,
+  id: '3,18'
+}, {
+  rvownerid: 15,
+  listingid: 11,
+  id: '11,15'
+}, {
+  rvownerid: 16,
+  listingid: 3,
+  id: '3,16'
+}, {
+  rvownerid: 10,
+  listingid: 9,
+  id: '9,10'
+}, {
+  rvownerid: 16,
+  listingid: 20,
+  id: '20,16'
+}, {
+  rvownerid: 11,
+  listingid: 11,
+  id: '11,11'
+}, {
+  rvownerid: 9,
+  listingid: 20,
+  id: '20,9'
+}, {
+  rvownerid: 15,
+  listingid: 16,
+  id: '16,15'
+}, {
+  rvownerid: 16,
+  listingid: 4,
+  id: '4,16'
+}, {
+  rvownerid: 15,
+  listingid: 18,
+  id: '18,15'
+}, {
+  rvownerid: 3,
+  listingid: 17,
+  id: '17,3'
+}, {
+  rvownerid: 3,
+  listingid: 4,
+  id: '4,3'
+}, {
+  rvownerid: 10,
+  listingid: 12,
+  id: '12,10'
+}]
+const landowner_listings = [{
+  landownerid: 9,
+  listingid: 8,
+  id: '9,8'
+}, {
+  landownerid: 19,
+  listingid: 7,
+  id: '19,7'
+}, {
+  landownerid: 2,
+  listingid: 1,
+  id: '2,1'
+}, {
+  landownerid: 11,
+  listingid: 13,
+  id: '11,13'
+}, {
+  landownerid: 11,
+  listingid: 18,
+  id: '11,18'
+}, {
+  landownerid: 4,
+  listingid: 11,
+  id: '4,11'
+}, {
+  landownerid: 1,
+  listingid: 20,
+  id: '1,20'
+}, {
+  landownerid: 15,
+  listingid: 7,
+  id: '15,7'
+}, {
+  landownerid: 17,
+  listingid: 9,
+  id: '17,9'
+}, {
+  landownerid: 7,
+  listingid: 10,
+  id: '7,10'
+}, {
+  landownerid: 9,
+  listingid: 11,
+  id: '9,11'
+}, {
+  landownerid: 12,
+  listingid: 7,
+  id: '12,7'
+}, {
+  landownerid: 4,
+  listingid: 17,
+  id: '4,17'
+}, {
+  landownerid: 7,
+  listingid: 6,
+  id: '7,6'
+}, {
+  landownerid: 11,
+  listingid: 18,
+  id: '11,18'
+}, {
+  landownerid: 16,
+  listingid: 13,
+  id: '16,13'
+}, {
+  landownerid: 15,
+  listingid: 13,
+  id: '15,13'
+}, {
+  landownerid: 8,
+  listingid: 12,
+  id: '8,12'
+}, {
+  landownerid: 15,
+  listingid: 3,
+  id: '15,3'
+}, {
+  landownerid: 1,
+  listingid: 7,
+  id: '1,7'
+}, {
+  landownerid: 10,
+  listingid: 1,
+  id: '10,1'
+}, {
+  landownerid: 5,
+  listingid: 19,
+  id: '5,19'
+}, {
+  landownerid: 12,
+  listingid: 1,
+  id: '12,1'
+}, {
+  landownerid: 20,
+  listingid: 15,
+  id: '20,15'
+}, {
+  landownerid: 11,
+  listingid: 5,
+  id: '11,5'
+}, {
+  landownerid: 17,
+  listingid: 16,
+  id: '17,16'
+}, {
+  landownerid: 1,
+  listingid: 9,
+  id: '1,9'
+}, {
+  landownerid: 3,
+  listingid: 3,
+  id: '3,3'
+}, {
+  landownerid: 6,
+  listingid: 12,
+  id: '6,12'
+}, {
+  landownerid: 5,
+  listingid: 18,
+  id: '5,18'
+}, {
+  landownerid: 7,
+  listingid: 14,
+  id: '7,14'
+}, {
+  landownerid: 17,
+  listingid: 18,
+  id: '17,18'
+}, {
+  landownerid: 5,
+  listingid: 16,
+  id: '5,16'
+}, {
+  landownerid: 13,
+  listingid: 8,
+  id: '13,8'
+}, {
+  landownerid: 12,
+  listingid: 17,
+  id: '12,17'
+}]
+
+module.exports = { landowners, landowner_listings, rvownerfav_listings, rvowners, reservations, listings }
