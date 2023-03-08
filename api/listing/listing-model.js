@@ -10,6 +10,7 @@ module.exports = {
   find,
   findBy,
   findById,
+  findMinMax,
   findOwnerListings,
   findTableBy,
   remove,
@@ -66,27 +67,60 @@ function findListingsByQuery(query) {
 }
 
 // join reservation as r and listing as l where r.listing_id = l.id
-// and  r.date is not between date1,date2  
+// and  r.date is not between date1,date2
 //find specific listing availability between two dates
-function findListingAvailabilityBTWNDates(startDate,endDate,listingID){  
-return db('reservation')
-.where("listing_id",listingID)
-.whereBetween('date',[startDate,endDate])
-
+function findListingAvailabilityBTWNDates(startDate, endDate, listingID) {
+  return db("reservation")
+    .where("listing_id", listingID)
+    .whereBetween("date", [startDate, endDate]);
 }
 // Outputs:
 // select * from "reservations" where "date" between startDate and endDate
 
-
 //find any listings with availability between two dates (lat lon)
-function findListingAvailabilityBTWNDates(){
+function findListingAvailabilityBTWNDates() {
+  return db("reservation")
+    .join("listing", "reservation.listing_id", "listing.id")
+    .whereBetween("date", [startDate, endDate])
+    .andWhere("lat")
+    .select(
+      "listing.id",
+      "listing.photo",
+      "listing.title",
+      "listing.lat",
+      "listing.lon",
+      "listing.price"
+    )
 
-  return db('reservation').join('listing','reservation.listing_id','listing.id').whereBetween('date',[startDate,endDate]).andWhere('lat').select('listing.id','listing.photo','listing.title','listing.lat','listing.lon','listing.price',)
+    .where("listing_id", listingID)
+    .whereBetween("date", [startDate, endDate]);
+}
+function findListingAvailabilityBTWNDates() {
+  return db("reservation")
+    .join("listing", "reservation.listing_id", "listing.id")
+    .whereBetween("date", [startDate, endDate])
+    .andWhere("lat")
+    .select(
+      "listing.id",
+      "listing.photo",
+      "listing.title",
+      "listing.lat",
+      "listing.lon",
+      "listing.price"
+    )
 
-.where("listing_id",listingID)
-.whereBetween('date',[startDate,endDate])
+    .where("listing_id", listingID)
+    .whereBetween("date", [startDate, endDate]);
 }
 
+function findMinMax(tbl, col) {
+  console.log({ tbl, col });
+  return db(tbl).min(col).max(col);
+}
+// function findListingAvailabilityMinMax(table, column) {
+//   return db("listing").raw(`select MIN(${col}), MAX(${col})`);
+// }
+//
 function findBy(prop, filter) {
   const table = prop.toString();
   return db(table).where("id", filter);
@@ -101,7 +135,6 @@ function findTableBy(prop, filter) {
   const table = prop.toString();
   return db(table).where("landower_id", filter);
 }
-
 
 function findOwnerListings(id) {
   return db("landowner")

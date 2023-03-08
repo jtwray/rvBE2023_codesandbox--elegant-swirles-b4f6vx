@@ -69,6 +69,30 @@ router.get("/searchlistings", async (req, res) => {
     });
 });
 
+router.get("/minmax", async (req, res) => {
+  console.log(req.body);
+  const { table, column } = req.body;
+  list
+    .findMinMax(table, column)
+    .then((listings) => {
+      listings.length === undefined
+        ? res.status(404).json({
+            message: "the minmax latitudes for all listings could not be found",
+          })
+        : listings.length === 0
+        ? res.status(200).json({ listings, message: "No listings. " })
+        : res.status(200).json({
+            message: `Found the following min and max bounds for column:${column} in table:${table}`,
+            listings,
+          });
+    })
+    .catch((error) => {
+      res.status(500).json({
+        error: `there was an error on the server while attempting to retrieve the listings.--+${error}`,
+      });
+      console.error(error);
+    });
+});
 router.get("/", async (req, res) => {
   console.log(req.body);
   list
