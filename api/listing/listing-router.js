@@ -72,6 +72,14 @@ router.get("/searchlistings", async (req, res) => {
 router.get("/minmax", async (req, res) => {
   console.log(req.body);
   const { table, column } = req.body;
+  if (!column || !table)
+    res
+      .status(400)
+      .message(
+        `Required values for ${
+          !table && !column ? "table and column" : !table ? "table" : "col"
+        } are missing. Please include them and retry your query.`
+      );
   list
     .findMinMax(table, column)
     .then((listings) => {
